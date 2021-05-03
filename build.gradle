@@ -13,8 +13,13 @@ group 'app.pure'
 version '1.0'
 
 def allureVersion = "2.13.8",
-    selenideVersion = "5.19.0",
-    junitVersion = "5.7.1"
+    selenideVersion = "5.20.1",
+    junitVersion = "5.7.1",
+    aspectjVersion = "1.9.6",
+    allureeeVersion = "3.28.2",
+    aeonbitsVersion = "1.0.12",
+    logbackVersion = "1.2.3",
+    javafakerVersion = "1.0.2"
 
 allure {
     version = "${allureVersion}"
@@ -27,13 +32,13 @@ allure {
 
 dependencies {
     testImplementation (
-            "org.aspectj:aspectjweaver:1.9.6",
+            "org.aspectj:aspectjweaver:$aspectjVersion",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "ch.qos.logback:logback-classic:1.2.3",
-            "com.github.javafaker:javafaker:1.0.2",
-            "org.aeonbits.owner:owner:1.0.12",
-            "io.qameta.allure:allure-ee-junit-platform:3.28.2",
+            "ch.qos.logback:logback-classic:$logbackVersion",
+            "com.github.javafaker:javafaker:$javafakerVersion",
+            "org.aeonbits.owner:owner:$aeonbitsVersion",
+            "io.qameta.allure:allure-ee-junit-platform:$allureeeVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "org.junit.jupiter:junit-jupiter-params:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
